@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <title>Owner-MMVR International</title>
+    <style>
+      *{
+        font-family: 'Lato', sans-serif;
+      }
+      .navbar-text{
+        padding-left:30px;
+        padding-right:30px;
+
+    }
+        .footer{
+  background: #152F4F;
+  color:white;
+
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  }
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);}
+}
+
+#maintable {
+  margin-left: 75px;
+  margin-right: 75px;
+overflow-y: auto;
+margin-bottom: 50px;
+}
+tbody {
+    display:block;
+    height:400px;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+
+    </style>
+    </head>
+    <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="logo1.png" width="104" height="24" class="d-inline-block align-top" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Welcome Username!
+    </span>
+    <form class="form-inline">
+    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout</button>
+  </form>
+  </div>
+</nav>
+
+
+<div class="container-fluid" id="main">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                <li class="nav-item"><a class="nav-link" href="#">Add Employee</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">View Hotel Customers</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">View Restaurant Customers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">View Employees</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Manage Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">View Hotel Bills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">View Restaurant Bills</a></li>
+            </ul>
+        </div>
+        <!--/col-->
+
+        <div class="col main pt-5 mt-3">
+
+              <h1 style="text-align: center; margin-bottom: 50px; margin-top: 10px;">Owner Dashboard</h1>
+
+            <div class="row mb-3">
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card bg-success text-white h-100">
+                      <div class="card-header">
+                        <h6>Today's Hotel Customers</h6>
+                      </div>
+                        <div class="card-body bg-success">
+                          <i class="fa fa-user fa-4x"></i>
+                            <h1 style="display:inline-block;" class="display-4">25</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-danger h-100">
+                      <div class="card-header">
+                        <h6>Today's Restaurant Customers</h6>
+                      </div>
+                        <div class="card-body bg-danger">
+                                <i class="fa fa-user fa-4x"></i>
+                      <h1 style="display:inline-block;" class="display-4">178</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-info h-100">
+                      <div class="card-header">
+                      <h6>Today's Hotel Earning</h6>
+                    </div>
+                        <div class="card-body bg-info">
+                              <i class="fa fa-rupee fa-4x"></i>
+                            <h1 style="display:inline-block;" class="display-4">57890</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-warning h-100">
+                      <div class="card-header">
+                      <h6>Today's Restaurant Earning</h6>
+                    </div>
+                        <div class="card-body">
+                                <i class="fa fa-rupee fa-4x"></i>
+                            <h1 style="display:inline-block;" class="display-4">67684</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<hr>
+
+        <div id="maintable">
+          <caption>Current Hotel Occupency</caption>
+        <table style="margin-right: 30px;" class="table table-hover table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Room Number</th>
+          <th scope="col">Room Type</th>
+          <th scope="col">Occupant Name</th>
+          <th scope="col">Date From</th>
+          <th scope="col">Date To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">102</th>
+          <td>Classic Double Bed</td>
+          <td>Rohit Shetty</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">103</th>
+          <td>Deluxe Double Bed</td>
+          <td>Rohan Garg</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">101</th>
+          <td>Classic Single Bed</td>
+          <td>Mayur Hebbar</td>
+          <td>27-08-2020</td>
+          <td>29-08-2020</td>
+        </tr>
+      </tbody>
+      </table>
+      </div>
+</div>
+  </div>
+</div>
+<!-- footer-->
+<div class="mt-5 pt-5 pb-5 footer">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-xs-12 about-company">
+      <h2>MMVR International</h2>
+      <p class="pr-5 text-white-50">The best Hotel and Restaurant in the town. </p>
+      <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+    </div>
+    <div class="col-lg-3 col-xs-12 links">
+      <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+        <ul class="m-0 p-0">
+          <li>- <a href="#">Home</a></li>
+          <li>- <a href="#">About Us</a></li>
+          <li>- <a href="#">Restaurant</a></li>
+          <li>- <a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-4 col-xs-12 location">
+      <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+      <p>Mysuru, Karnataka</p>
+      <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
+      <p><i class="fa fa-envelope-o mr-3"></i>info@hsdf.com</p>
+    </div>
+  </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
