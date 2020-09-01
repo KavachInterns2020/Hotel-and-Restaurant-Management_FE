@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <title>Extend Stay-MMVR International</title>
+    <style>
+      *{
+        font-family: 'Lato', sans-serif;
+      }
+      .navbar-text{
+        padding-left:30px;
+        padding-right:30px;
+
+    }
+        .footer{
+  background: #152F4F;
+  color:white;
+
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  }
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);}
+}
+    </style>
+    </head>
+    <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="logo1.png" width="104" height="24" class="d-inline-block align-top" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Welcome Username!
+    </span>
+    <form class="form-inline">
+    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout</button>
+  </form>
+  </div>
+</nav>
+<h1 style="text-align: center; margin-bottom: 50px; margin-top: 20px;">Extend your stay at MMVR International</h1>
+
+<div class="card" style="margin-left: 300px; margin-right: 300px;">
+  <form style="padding: 30px;">
+  <div class="form-group row">
+    <label for="staticRoomType" class="col-sm-2 col-form-label">Room Type</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticRoomType" value="Classic Double Bed" name="roomtype">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="staticRoomNumber" class="col-sm-2 col-form-label">Room Number</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticRoomNumber" name="roomnumber" value="102">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="fname" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text"  readonly class="form-control-plaintext" id="fname" name="firstname" value="Mayur Hebbar">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="emailid" class="col-sm-2 col-form-label">Email ID</label>
+    <div class="col-sm-10">
+      <input type="email" readonly class="form-control-plaintext" id="emailid" name="email" value="mhebbar@gmail.com">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="pno" class="col-sm-2 col-form-label">Phone Number</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="pno" name="phone" value="9988776655">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="adate" class="col-sm-2 col-form-label">Date of Arrival</label>
+    <div class="col-sm-10">
+      <input type="date"  readonly class="form-control-plaintext" id="adate" name="adate" value="2020-08-01">
+    </div>
+  </div>
+    <div class="form-group row">
+    <label for="ddate" class="col-sm-2 col-form-label">Current Date of Departure</label>
+    <div class="col-sm-10">
+      <input type="date" style="font-weight: bold;" readonly class="form-control-plaintext" id="checkout" name="checkout" value="2020-08-05">
+    </div>
+  </div>
+
+      <div class="form-group row">
+    <label for="ddate" class="col-sm-2 col-form-label">Select New Date of Departure</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control col-sm-3" id="checkout" name="checkout">
+    </div>
+  </div>
+
+
+    <div class="form-group row">
+    <label for="amt" class="col-sm-2 col-form-label">Extra Amount to be billed</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="amt" name="amount" value="₹3480" style="font-weight: bold;">
+    </div>
+  </div>
+  <!--
+    <div class="form-group row">
+    <label for="feedback" class="col-sm-2 col-form-label">Reason for stay Extension(if any)</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="feedback" rows="5" name="feedback" placeholder="Type Reason"></textarea>
+    </div>
+  </div>
+-->
+    <!--  <div class="form-group row">
+    <label for="radiogrp" class="col-sm-2 col-form-label">Mode Of Payment</label>
+      <div class="col-sm-10">
+          <div class="form-check form-check-inline" title="Cash" style="margin-right: 50px;">
+            <input class="form-check-input" type="radio" name="modeofpayment" id="inlineRadio1" value="cash">
+            <label class="form-check-label" for="inlineRadio1">Cash</label>
+          </div>
+          <div class="form-check form-check-inline" title="Card" style="margin-right: 50px;margin-left: 50px;">
+            <input class="form-check-input" type="radio" name="modeofpayment" id="inlineRadio2" value="card">
+            <label class="form-check-label" for="inlineRadio2">Card</label>
+          </div>
+          <div class="form-check form-check-inline" title="UPI" style="margin-right: 50px;margin-left: 50px;">
+            <input class="form-check-input" type="radio" name="modeofpayment" id="inlineRadio3" value="upi">
+            <label class="form-check-label" for="inlineRadio3">UPI</label>
+          </div>
+      </div>
+  </div> -->
+  <div style="text-align: center;">
+<button type="submit" class="btn btn-primary">Extend Stay</button>
+</div>
+</form>
+
+
+
+</div>
+
+<!-- footer-->
+<div class="mt-5 pt-5 pb-5 footer">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-xs-12 about-company">
+      <h2>MMVR International</h2>
+      <p class="pr-5 text-white-50">The best Hotel and Restaurant in the town. </p>
+      <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+    </div>
+    <div class="col-lg-3 col-xs-12 links">
+      <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+        <ul class="m-0 p-0">
+          <li>- <a href="#">Home</a></li>
+          <li>- <a href="#">About Us</a></li>
+          <li>- <a href="#">Restaurant</a></li>
+          <li>- <a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-4 col-xs-12 location">
+      <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+      <p>Mysuru, Karnataka</p>
+      <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
+      <p><i class="fa fa-envelope-o mr-3"></i>info@hsdf.com</p>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
